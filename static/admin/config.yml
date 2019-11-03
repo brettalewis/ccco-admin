@@ -1,0 +1,39 @@
+backend:
+  name: git-gateway
+
+publish_mode: editorial_workflow
+
+media_library:
+  name: cloudinary
+  
+  config:
+    cloud_name: db2kg6drb
+    api_key: 571916794148849
+    
+media_folder: "static/images/uploads"
+public_folder: "images/uploads"
+
+collections:
+  - name: "staff"
+    label: "Staff"
+    folder: "content/staff"
+    create: true
+    identifier_field: name
+    fields:
+      - {label: Staff Name, name: name, widget: string}
+      - label: Staff Picture
+        name: photo
+        widget: image
+        required: false
+        tagname: ''
+        media_library:
+          config:
+            default_transformations:
+              -   - aspect_ratio: "1:1"
+                    crop: "crop"
+                  - crop: "limit"
+                    width: 300
+                  - gravity: "face:center"
+                  - radius: "max"
+      - {label: Job Title, name: job_title, widget: string}
+      - {label: Short Bio, name: body, widget: markdown}
