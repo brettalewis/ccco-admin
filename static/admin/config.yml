@@ -17,9 +17,11 @@ collections:
   - name: "events"
     label: "Events"
     folder: "content/events"
+    filter: {field: "cms", value: true}
     create: true
     identifier_field: name
     fields:
+      - {label: CMS, name: cms, widget: hidden, default: true}
       - {label: Event Name, name: name, widget: string}
       - label: Event Picture
         name: photo
@@ -31,9 +33,11 @@ collections:
   - name: "staff"
     label: "Staff"
     folder: "content/staff"
+    filter: {field: "cms", value: true}
     create: true
     identifier_field: name
     fields:
+      - {label: CMS, name: cms, widget: hidden, default: true}
       - {label: Staff Name, name: name, widget: string}
       - label: Staff Picture
         name: photo
