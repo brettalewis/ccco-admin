@@ -14,6 +14,20 @@ media_folder: "static/images/uploads"
 public_folder: "images/uploads"
 
 collections:
+  - name: "events"
+    label: "Events"
+    folder: "content/events"
+    create: true
+    identifier_field: name
+    fields:
+      - {label: Event Name, name: name, widget: string}
+      - label: Event Picture
+        name: photo
+        widget: image
+        required: false
+        tagname: ''
+      - {label: Event Date, name: startdate, widget: datetime}
+      - {label: Description, name: description, widget: markdown}
   - name: "staff"
     label: "Staff"
     folder: "content/staff"
