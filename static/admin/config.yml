@@ -28,6 +28,7 @@ collections:
             fields:
               - name: "event1"
                 label: "Event 1"
+                required: false
                 widget: "relation"
                 collection: "events"
                 displayFields: ["name"]
@@ -35,6 +36,7 @@ collections:
                 valueField: "name"
               - name: "event2"
                 label: "Event 2"
+                required: false
                 widget: "relation"
                 collection: "events"
                 displayFields: ["name"]
@@ -42,6 +44,7 @@ collections:
                 valueField: "name"
               - name: "event3"
                 label: "Event 3"
+                required: false
                 widget: "relation"
                 collection: "events"
                 displayFields: ["name"]
