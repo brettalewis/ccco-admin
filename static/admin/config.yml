@@ -14,8 +14,42 @@ media_folder: "static/images/uploads"
 public_folder: "images/uploads"
 
 collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "home"
+        label: "Home"
+        file: "content/_index.md"
+        fields: 
+          - { label: Title, name: title, widget: string }
+          - name: "events"
+            label: "What's Happening Now?"
+            widget: "object"
+            fields:
+              - name: "event1"
+                label: "Event 1"
+                widget: "relation"
+                collection: "events"
+                displayFields: ["name"]
+                searchFields: ["name"]
+                valueField: "name"
+              - name: "event2"
+                label: "Event 2"
+                widget: "relation"
+                collection: "events"
+                displayFields: ["name"]
+                searchFields: ["name"]
+                valueField: "name"
+              - name: "event3"
+                label: "Event 3"
+                widget: "relation"
+                collection: "events"
+                displayFields: ["name"]
+                searchFields: ["name"]
+                valueField: "name"
   - name: "events"
     label: "Events"
+    label_singular: "Event"
     folder: "content/events"
     filter: {field: "cms", value: true}
     create: true
@@ -32,6 +66,7 @@ collections:
       - {label: Description, name: description, widget: markdown}
   - name: "staff"
     label: "Staff"
+    label_singular: "Staff"
     folder: "content/staff"
     filter: {field: "cms", value: true}
     create: true
