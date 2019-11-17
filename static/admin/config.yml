@@ -22,34 +22,12 @@ collections:
         file: "content/_index.md"
         fields: 
           - { label: Title, name: title, widget: string }
-          - name: "events"
-            label: "What's Happening Now?"
-            widget: "object"
-            fields:
-              - name: "event1"
-                label: "Event 1"
-                required: false
-                widget: "relation"
-                collection: "events"
-                displayFields: ["name"]
-                searchFields: ["name"]
-                valueField: "name"
-              - name: "event2"
-                label: "Event 2"
-                required: false
-                widget: "relation"
-                collection: "events"
-                displayFields: ["name"]
-                searchFields: ["name"]
-                valueField: "name"
-              - name: "event3"
-                label: "Event 3"
-                required: false
-                widget: "relation"
-                collection: "events"
-                displayFields: ["name"]
-                searchFields: ["name"]
-                valueField: "name"
+          - label: "Number of Events"
+            name: "eventnum"
+            widget: "number"
+            valueType: "int"
+            default: 3
+            min: 0
   - name: "events"
     label: "Events"
     label_singular: "Event"
