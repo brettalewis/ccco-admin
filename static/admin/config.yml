@@ -1,5 +1,5 @@
 backend:
-  name: git-gateway
+  name: test-repo
 
 publish_mode: editorial_workflow
 
@@ -23,6 +23,11 @@ collections:
         file: "content/_index.md"
         fields: 
           - { label: Title, name: title, widget: string }
+          - label: "Carousel Images"
+            name: "galleryImages"
+            widget: "list"
+            field: {label: Image, name: image, widget: image}
+          - { label: 'About Us content', name: 'about-us', widget: 'markdown' }
           - label: "Number of Events"
             name: "eventnum"
             widget: "number"
