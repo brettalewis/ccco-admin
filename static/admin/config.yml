@@ -18,7 +18,6 @@ collections:
     label: "Pages"
     delete: false
     files:
-    files:
       - name: "home"
         label: "Home"
         file: "content/_index.md"
