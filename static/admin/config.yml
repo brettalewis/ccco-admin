@@ -1,5 +1,5 @@
 backend:
-  name: test-repo
+  name: git-gateway
 
 publish_mode: editorial_workflow
 
@@ -17,6 +17,7 @@ collections:
   - name: "pages"
     label: "Pages"
     delete: false
+    files:
     files:
       - name: "home"
         label: "Home"
