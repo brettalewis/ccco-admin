@@ -85,6 +85,5 @@ collections:
                   - crop: "limit"
                     width: 300
                   - gravity: "face:center"
-                  - radius: "max"
       - {label: Job Title, name: job_title, widget: string}
       - {label: Short Bio, name: body, widget: markdown}
