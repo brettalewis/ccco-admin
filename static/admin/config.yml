@@ -23,10 +23,21 @@ collections:
         file: "content/_index.md"
         fields: 
           - { label: Title, name: title, widget: string }
+          - { label: Description, name: description, widget: string }
           - label: "Carousel Images"
             name: "galleryImages"
             widget: "list"
-            field: {label: Image, name: image, widget: image}
+            field:
+              - label: "Image"
+                name: "image"
+                widget: "image"
+                media_library:
+                  config:
+                    default_transformations:
+                      - - fetch_format: auto
+                          height: 700
+                          quality: auto:best
+                          crop: fit
           - { label: 'About Us content', name: 'aboutUs', widget: 'markdown' }
           - label: "Number of Events"
             name: "eventnum"
