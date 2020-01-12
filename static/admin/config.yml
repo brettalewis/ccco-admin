@@ -27,17 +27,17 @@ collections:
           - label: "Carousel Images"
             name: "galleryImages"
             widget: "list"
-            field:
-              - label: "Image"
-                name: "image"
-                widget: "image"
-                media_library:
-                  config:
-                    default_transformations:
-                      - - fetch_format: auto
-                          height: 700
+            field: 
+              label: 'Image'
+              name: 'image'
+              widget: 'image'
+              media_library:
+                config:
+                  default_transformations:
+                    -   - fetch_format: auto
                           quality: auto:best
-                          crop: fit
+                          height: 700
+                          crop: scale
           - { label: 'About Us content', name: 'aboutUs', widget: 'markdown' }
           - label: "Number of Events"
             name: "eventnum"
