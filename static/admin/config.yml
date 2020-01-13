@@ -45,6 +45,129 @@ collections:
             valueType: "int"
             default: 3
             min: 0
+  - name: "programs"
+    label: "Programs"
+    delete: false
+    files:
+      - name: "fallPreschool"
+        label: "Fall Programs - Preschool"
+        file: "content/programs/fall/preschool/_index.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "table" }
+          - { label: "Description", name: "description", widget: "string", required: false }
+          - { label: "Session", name: "session", widget: "string" }
+          - { label: "Category 1", name: "category1", widget: "string", required: false }
+          - { label: "Category 2", name: "category2", widget: "string", required: false }
+          - { label: "Category 3", name: "category3", widget: "string", required: false }
+          - label: Tile Picture
+            name: photo
+            widget: image
+            tagname: ''
+            media_library:
+              config:
+                default_transformations:
+                  -   - crop: "fill"
+                        gravity: "center"
+                        height: 400
+                        width: 400
+                      - background: "rgb:000000"
+                        effect: "gradient_fade"
+                        y: -0.50
+                      - overlay: "text:overpass_42_style_bold_align_center:Preschool"
+                        color: "rgb:ffffff"
+                        width: 0.75
+                        y: 0.3
+      - name: "fallGradeSchool"
+        label: "Fall Programs - Grade School"
+        file: "content/programs/fall/k-12/_index.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "table" }
+          - { label: "Description", name: "description", widget: "string", required: false }
+          - { label: "Session", name: "session", widget: "string" }
+          - { label: "Category 1", name: "category1", widget: "string", required: false }
+          - { label: "Category 2", name: "category2", widget: "string", required: false }
+          - { label: "Category 3", name: "category3", widget: "string", required: false }
+          - label: Tile Picture
+            name: photo
+            widget: image
+            required: false
+            tagname: ''
+            media_library:
+              config:
+                default_transformations:
+                  -   - crop: "fill"
+                        gravity: "center"
+                        height: 400
+                        width: 400
+                      - background: "rgb:000000"
+                        effect: "gradient_fade"
+                        y: -0.50
+                      - overlay: "text:overpass_42_style_bold_align_center:Grade School"
+                        color: "rgb:ffffff"
+                        width: 0.75
+                        y: 0.3                      
+      - name: "fallAdult"
+        label: "Fall Programs - Adult"
+        file: "content/programs/fall/adult/_index.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "table" }
+          - { label: "Description", name: "description", widget: "string", required: false }
+          - { label: "Session", name: "session", widget: "string" }
+          - { label: "Category 1", name: "category1", widget: "string", required: false }
+          - { label: "Category 2", name: "category2", widget: "string", required: false }
+          - { label: "Category 3", name: "category3", widget: "string", required: false }
+          - label: Tile Picture
+            name: photo
+            widget: image
+            required: false
+            tagname: ''
+            media_library:
+              config:
+                default_transformations:
+                  -   - crop: "fill"
+                        gravity: "center"
+                        height: 400
+                        width: 400
+                      - background: "rgb:000000"
+                        effect: "gradient_fade"
+                        y: -0.50
+                      - overlay: "text:overpass_42_style_bold_align_center:Adult Classes"
+                        color: "rgb:ffffff"
+                        width: 0.75
+                        y: 0.3
+      - name: "winter"
+        label: "Winter Programs"
+        file: "content/programs/winter/_index.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "table" }
+          - { label: "Description", name: "description", widget: "string", required: false }
+          - { label: "Session", name: "session", widget: "string" }
+          - { label: "Category 1", name: "category1", widget: "string", required: false }
+          - { label: "Category 2", name: "category2", widget: "string", required: false }
+          - { label: "Category 3", name: "category3", widget: "string", required: false }
+          - label: Tile Picture
+            name: photo
+            widget: image
+            required: false
+            tagname: ''
+            media_library:
+              config:
+                default_transformations:
+                  -   - crop: "fill"
+                        gravity: "center"
+                        height: 400
+                        width: 400
+                      - background: "rgb:000000"
+                        effect: "gradient_fade"
+                        y: -0.50
+                      - overlay: "text:overpass_42_style_bold_align_center:Winter Classes"
+                        color: "rgb:ffffff"
+                        width: 0.75
+                        y: 0.3
   - name: "events"
     label: "Events"
     label_singular: "Event"
