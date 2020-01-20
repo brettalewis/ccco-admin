@@ -104,7 +104,7 @@ collections:
                       - background: "rgb:000000"
                         effect: "gradient_fade"
                         y: -0.50
-                      - overlay: "text:overpass_42_style_bold_align_center:Grade School"
+                      - overlay: "text:overpass_42_style_bold_align_center:Grade%20School"
                         color: "rgb:ffffff"
                         width: 0.75
                         y: 0.3                      
@@ -134,7 +134,7 @@ collections:
                       - background: "rgb:000000"
                         effect: "gradient_fade"
                         y: -0.50
-                      - overlay: "text:overpass_42_style_bold_align_center:Adult Classes"
+                      - overlay: "text:overpass_42_style_bold_align_center:Adult%20Classes"
                         color: "rgb:ffffff"
                         width: 0.75
                         y: 0.3
@@ -164,7 +164,7 @@ collections:
                       - background: "rgb:000000"
                         effect: "gradient_fade"
                         y: -0.50
-                      - overlay: "text:overpass_42_style_bold_align_center:Winter Classes"
+                      - overlay: "text:overpass_42_style_bold_align_center:Winter%20Classes"
                         color: "rgb:ffffff"
                         width: 0.75
                         y: 0.3
@@ -183,8 +183,16 @@ collections:
         widget: image
         required: false
         tagname: ''
+        media_library:
+          config:
+            default_transformations:
+              -   - crop: "fill"
+                    gravity: "auto:subject"
+                    height: 310
+                    width: 310
       - {label: Event Date, name: startdate, widget: datetime}
-      - {label: Description, name: description, widget: markdown}
+      - {label: Description, name: description, widget: string}
+      - {label: Event Info, name: body, widget: markdown}
   - name: "staff"
     label: "Staff"
     label_singular: "Staff"
