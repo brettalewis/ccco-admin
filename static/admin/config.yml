@@ -193,9 +193,6 @@ collections:
       - label: "Event Date"
         name: "startdate"
         widget: "datetime"
-        dateFormat: "MMM DD"
-        timeFormat: "h:mm a"
-        format: "MMM DD @ h:mm a"
       - {label: Description, name: description, widget: string}
       - {label: Event Info, name: body, widget: markdown}
   - name: "staff"
