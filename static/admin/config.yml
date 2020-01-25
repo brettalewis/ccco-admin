@@ -190,7 +190,11 @@ collections:
                     gravity: "auto:subject"
                     height: 310
                     width: 310
-      - {label: Event Date, name: startdate, widget: datetime}
+      - label: "Event Date"
+        name: "startdate"
+        widget: "datetime"
+        dateFormat: "MMM DD"
+        timeFormat: "hh:mm a"
       - {label: Description, name: description, widget: string}
       - {label: Event Info, name: body, widget: markdown}
   - name: "staff"
