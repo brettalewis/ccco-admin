@@ -60,6 +60,8 @@ collections:
           - { label: "Category 1", name: "category1", widget: "string", required: false }
           - { label: "Category 2", name: "category2", widget: "string", required: false }
           - { label: "Category 3", name: "category3", widget: "string", required: false }
+          - { label: "Minimum Age", name: "minage": widget: "hidden", default: 2 }
+          - { label: "Maximum Age", name: "maxage", widget: "hidden", default: 5 }
           - label: Tile Picture
             name: photo
             widget: image
@@ -89,6 +91,8 @@ collections:
           - { label: "Category 1", name: "category1", widget: "string", required: false }
           - { label: "Category 2", name: "category2", widget: "string", required: false }
           - { label: "Category 3", name: "category3", widget: "string", required: false }
+          - { label: "Minimum Age", name: "minage": widget: "hidden", default: 5 }
+          - { label: "Maximum Age", name: "maxage", widget: "hidden", default: 18 }
           - label: Tile Picture
             name: photo
             widget: image
@@ -149,6 +153,8 @@ collections:
           - { label: "Category 1", name: "category1", widget: "string", required: false }
           - { label: "Category 2", name: "category2", widget: "string", required: false }
           - { label: "Category 3", name: "category3", widget: "string", required: false }
+          - { label: "Minimum Age", name: "minage": widget: "hidden", default: 2 }
+          - { label: "Maximum Age", name: "maxage", widget: "hidden", default: 18 }
           - label: Tile Picture
             name: photo
             widget: image
@@ -195,6 +201,23 @@ collections:
         widget: "datetime"
       - {label: Description, name: description, widget: string}
       - {label: Event Info, name: body, widget: markdown}
+  - name: "company"
+    label: "Company"
+    label_singular: "Company"
+    folder: "content/company"
+    filter: {field: "cms", value: true}
+    create: true
+    identifier_field: name
+    fields:
+      - {label: CMS, name: cms, widget: hidden, default: true}
+      - {label: Company Name, name: name, widget: string}
+      - label: Company Picture
+        name: photo
+        widget: image
+        required: false
+        tagname: ''
+      - {label: Description, name: description, widget: string}
+      - {label: Company Info, name: body, widget: markdown}
   - name: "staff"
     label: "Staff"
     label_singular: "Staff"
