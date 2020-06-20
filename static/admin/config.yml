@@ -216,9 +216,45 @@ collections:
         widget: image
         required: false
         tagname: ''
+      - {label: Password, name: password, widget: string}
       - {label: Description, name: description, widget: string}
       - {label: Company Info, name: body, widget: markdown}
-      - {label: Password, name: password, widget: string}
+      - label: Resources
+        name: resources
+        widget: object
+        fields:
+        - label: "General Information"
+          name: general_info
+          widget: list
+          fields:
+            - {label: Title, name: general_file_title, widget: string}
+            - label: File
+              name: general_file_path
+              widget: file
+        - label: "Guidelines"
+          name: guidelines
+          widget: list
+          fields:
+            - {label: Title, name: guidelines_file_title, widget: string}
+            - label: File
+              name: guidelines_file_path
+              widget: file
+        - label: "S/D/T Guidelines"
+          name: sdt_guidelines
+          widget: list
+          fields:
+            - {label: Title, name: sdt_file_title, widget: string}
+            - label: File
+              name: sdt_file_path
+              widget: file
+        - label: "Schedule"
+          name: schedule
+          widget: list
+          fields:
+            - {label: Title, name: schedule_file_title, widget: string}
+            - label: File
+              name: schedule_file_path
+              widget: file
   - name: "staff"
     label: "Staff"
     label_singular: "Staff"
