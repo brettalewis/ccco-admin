@@ -5,11 +5,11 @@ publish_mode: editorial_workflow
 
 media_library:
   name: cloudinary
-  
+
   config:
     cloud_name: cc-co-dance-complex
     api_key: 568677699738745
-    
+
 media_folder: "static/images/uploads"
 public_folder: "images/uploads"
 
@@ -21,13 +21,13 @@ collections:
       - name: "home"
         label: "Home"
         file: "content/_index.md"
-        fields: 
+        fields:
           - { label: Title, name: title, widget: string }
           - { label: Description, name: description, widget: string }
           - label: "Carousel Images"
             name: "galleryImages"
             widget: "list"
-            field: 
+            field:
               label: 'Image'
               name: 'image'
               widget: 'image'
@@ -111,7 +111,7 @@ collections:
                       - overlay: "text:overpass_42_style_bold_align_center:Grade%20School"
                         color: "rgb:ffffff"
                         width: 0.75
-                        y: 0.3                      
+                        y: 0.3
       - name: "fallAdult"
         label: "Fall Programs - Adult"
         file: "content/programs/fall/adult/_index.md"
@@ -218,6 +218,7 @@ collections:
         tagname: ''
       - {label: Description, name: description, widget: string}
       - {label: Company Info, name: body, widget: markdown}
+      - {label: Password, name: password, widget: string}
   - name: "staff"
     label: "Staff"
     label_singular: "Staff"
