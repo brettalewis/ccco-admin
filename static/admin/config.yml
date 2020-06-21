@@ -228,7 +228,7 @@ collections:
           widget: list
           fields:
             - {label: Title, name: form_title, widget: string}
-            - {label: URL: name: form_url, widget: string}
+            - {label: URL, name: form_url, widget: string}
         - label: "General Information"
           name: general_info
           widget: list
