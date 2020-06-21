@@ -245,7 +245,7 @@ collections:
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Description, name: description, widget: string }
-          - { label: Password, name: password, widget: string }
+          - { label: Password, name: password, widget: string, required: false }
           - { label: Content, name: body, widget: markdown }
           - name: 'resources'
             label: 'Resources'
@@ -283,7 +283,7 @@ collections:
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Description, name: description, widget: string }
-          - { label: Password, name: password, widget: string }
+          - { label: Password, name: password, widget: string, required: false }
           - { label: Content, name: body, widget: markdown }
           - name: 'resources'
             label: 'Resources'
@@ -330,7 +330,7 @@ collections:
         widget: image
         required: false
         tagname: ''
-      - {label: Password, name: password, widget: string}
+      - {label: Password, name: password, widget: string, required: false}
       - {label: Description, name: description, widget: string}
       - {label: Company Info, name: body, widget: markdown}
       - name: 'resources'
