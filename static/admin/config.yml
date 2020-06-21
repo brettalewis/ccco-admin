@@ -54,7 +54,7 @@ collections:
         file: "content/programs/fall/preschool/_index.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Layout", name: "layout", widget: "hidden", default: "table" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "table_day" }
           - { label: "Description", name: "description", widget: "string", required: false }
           - { label: "Session", name: "session", widget: "string" }
           - { label: "Category 1", name: "category1", widget: "string", required: false }
@@ -85,7 +85,7 @@ collections:
         file: "content/programs/fall/k-12/_index.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Layout", name: "layout", widget: "hidden", default: "table" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "table_day" }
           - { label: "Description", name: "description", widget: "string", required: false }
           - { label: "Session", name: "session", widget: "string" }
           - { label: "Category 1", name: "category1", widget: "string", required: false }
@@ -117,7 +117,7 @@ collections:
         file: "content/programs/fall/adult/_index.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Layout", name: "layout", widget: "hidden", default: "table" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "table_day" }
           - { label: "Description", name: "description", widget: "string", required: false }
           - { label: "Session", name: "session", widget: "string" }
           - { label: "Category 1", name: "category1", widget: "string", required: false }
@@ -147,6 +147,40 @@ collections:
         file: "content/programs/winter/_index.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Section Class", name: "sectionClass", widget: "hidden", default: "winter-session"}
+          - { label: "Layout", name: "layout", widget: "hidden", default: "table_day" }
+          - { label: "Description", name: "description", widget: "string", required: false }
+          - { label: "Session", name: "session", widget: "string" }
+          - { label: "Category 1", name: "category1", widget: "string", required: false }
+          - { label: "Category 2", name: "category2", widget: "string", required: false }
+          - { label: "Category 3", name: "category3", widget: "string", required: false }
+          - { label: "Minimum Age", name: "minage", widget: "hidden", default: 2 }
+          - { label: "Maximum Age", name: "maxage", widget: "hidden", default: 18 }
+          - label: Tile Picture
+            name: photo
+            widget: image
+            required: false
+            tagname: ''
+            media_library:
+              config:
+                default_transformations:
+                  -   - crop: "fill"
+                        gravity: "center"
+                        height: 400
+                        width: 400
+                      - background: "rgb:000000"
+                        effect: "gradient_fade"
+                        y: -0.50
+                      - overlay: "text:overpass_42_style_bold_align_center:Winter%20Classes"
+                        color: "rgb:ffffff"
+                        width: 0.75
+                        y: 0.3
+      - name: "summer"
+        label: "Summer Programs"
+        file: "content/programs/summer/_index.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Section Class", name: "sectionClass", widget: "hidden", default: "summer-session"}
           - { label: "Layout", name: "layout", widget: "hidden", default: "table" }
           - { label: "Description", name: "description", widget: "string", required: false }
           - { label: "Session", name: "session", widget: "string" }
