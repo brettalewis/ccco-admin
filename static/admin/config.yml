@@ -1,6 +1,5 @@
 backend:
-  name: test-repo
-#  name: git-gateway
+  name: git-gateway
 
 publish_mode: editorial_workflow
 
