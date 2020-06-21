@@ -223,37 +223,43 @@ collections:
         name: resources
         widget: object
         fields:
+        - label: "Forms"
+          name: forms
+          widget: list
+          fields:
+            - {label: Title, name: form_title, widget: string}
+            - {label: URL: name: form_url, widget: string}
         - label: "General Information"
           name: general_info
           widget: list
           fields:
-            - {label: Title, name: general_file_title, widget: string}
+            - {label: Title, name: file_title, widget: string}
             - label: File
-              name: general_file_path
+              name: file_path
               widget: file
         - label: "Guidelines"
           name: guidelines
           widget: list
           fields:
-            - {label: Title, name: guidelines_file_title, widget: string}
+            - {label: Title, name: file_title, widget: string}
             - label: File
-              name: guidelines_file_path
+              name: file_path
               widget: file
         - label: "S/D/T Guidelines"
           name: sdt_guidelines
           widget: list
           fields:
-            - {label: Title, name: sdt_file_title, widget: string}
+            - {label: Title, name: file_title, widget: string}
             - label: File
-              name: sdt_file_path
+              name: file_path
               widget: file
         - label: "Schedule"
           name: schedule
           widget: list
           fields:
-            - {label: Title, name: schedule_file_title, widget: string}
+            - {label: Title, name: file_title, widget: string}
             - label: File
-              name: schedule_file_path
+              name: file_path
               widget: file
   - name: "staff"
     label: "Staff"
