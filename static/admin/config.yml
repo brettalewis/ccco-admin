@@ -250,12 +250,12 @@ collections:
           - name: 'resources'
             label: 'Resources'
             label_singular: 'Resource'
+            summary: '{{fields.section.header}}'
             widget: 'list'
             fields:
               - name: 'section'
                 label: 'Section'
                 widget: object
-                summary: '{{fields.header}}'
                 fields:
                   - { label: Header, name: header, widget: string }
                   - name: 'items'
@@ -288,12 +288,12 @@ collections:
           - name: 'resources'
             label: 'Resources'
             label_singular: 'Resource'
+            summary: '{{fields.section.header}}'
             widget: 'list'
             fields:
               - name: 'section'
                 label: 'Section'
                 widget: object
-                summary: '{{fields.header}}'
                 fields:
                   - { label: Header, name: header, widget: string }
                   - name: 'items'
@@ -337,11 +337,11 @@ collections:
         label: 'Resources'
         label_singular: 'Resource'
         widget: 'list'
+        summary: '{{fields.section.header}}'
         fields:
           - name: 'section'
             label: 'Section'
             widget: object
-            summary: '{{fields.header}}'
             fields:
               - { label: Header, name: header, widget: string }
               - name: 'items'
