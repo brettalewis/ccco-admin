@@ -72,7 +72,7 @@ collections:
                   -   - crop: "fill"
                         gravity: "center"
                         height: 400
-                        width: 400
+                        width: 800
                       - background: "rgb:000000"
                         effect: "gradient_fade"
                         y: -0.50
@@ -104,7 +104,7 @@ collections:
                   -   - crop: "fill"
                         gravity: "center"
                         height: 400
-                        width: 400
+                        width: 800
                       - background: "rgb:000000"
                         effect: "gradient_fade"
                         y: -0.50
@@ -134,7 +134,7 @@ collections:
                   -   - crop: "fill"
                         gravity: "center"
                         height: 400
-                        width: 400
+                        width: 800
                       - background: "rgb:000000"
                         effect: "gradient_fade"
                         y: -0.50
@@ -167,7 +167,7 @@ collections:
                   -   - crop: "fill"
                         gravity: "center"
                         height: 400
-                        width: 400
+                        width: 800
                       - background: "rgb:000000"
                         effect: "gradient_fade"
                         y: -0.50
@@ -200,7 +200,7 @@ collections:
                   -   - crop: "fill"
                         gravity: "center"
                         height: 400
-                        width: 400
+                        width: 800
                       - background: "rgb:000000"
                         effect: "gradient_fade"
                         y: -0.50
