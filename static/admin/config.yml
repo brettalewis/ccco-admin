@@ -28,6 +28,7 @@ collections:
             name: "alert"
             widget: "object"
             collapsed: true
+            required: false
             fields:
               - { label: Title, name: title, widget: string }
               - { label: Description, name: description, widget: string }
