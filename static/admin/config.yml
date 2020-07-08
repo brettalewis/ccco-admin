@@ -60,6 +60,7 @@ collections:
           - { label: "Category 1", name: "category1", widget: "string", required: false }
           - { label: "Category 2", name: "category2", widget: "string", required: false }
           - { label: "Category 3", name: "category3", widget: "string", required: false }
+          - { label: "Is Draft?", name: "draft", widget: "boolean"}
           - { label: "Minimum Age", name: "minage", widget: "hidden", default: 2 }
           - { label: "Maximum Age", name: "maxage", widget: "hidden", default: 5 }
           - label: Tile Picture
@@ -91,6 +92,7 @@ collections:
           - { label: "Category 1", name: "category1", widget: "string", required: false }
           - { label: "Category 2", name: "category2", widget: "string", required: false }
           - { label: "Category 3", name: "category3", widget: "string", required: false }
+          - { label: "Is Draft?", name: "draft", widget: "boolean"}
           - { label: "Minimum Age", name: "minage", widget: "hidden", default: 5 }
           - { label: "Maximum Age", name: "maxage", widget: "hidden", default: 18 }
           - label: Tile Picture
@@ -123,6 +125,7 @@ collections:
           - { label: "Category 1", name: "category1", widget: "string", required: false }
           - { label: "Category 2", name: "category2", widget: "string", required: false }
           - { label: "Category 3", name: "category3", widget: "string", required: false }
+          - { label: "Is Draft?", name: "draft", widget: "boolean"}
           - label: Tile Picture
             name: photo
             widget: image
@@ -154,6 +157,7 @@ collections:
           - { label: "Category 1", name: "category1", widget: "string", required: false }
           - { label: "Category 2", name: "category2", widget: "string", required: false }
           - { label: "Category 3", name: "category3", widget: "string", required: false }
+          - { label: "Is Draft?", name: "draft", widget: "boolean"}
           - { label: "Minimum Age", name: "minage", widget: "hidden", default: 2 }
           - { label: "Maximum Age", name: "maxage", widget: "hidden", default: 18 }
           - label: Tile Picture
@@ -187,6 +191,7 @@ collections:
           - { label: "Category 1", name: "category1", widget: "string", required: false }
           - { label: "Category 2", name: "category2", widget: "string", required: false }
           - { label: "Category 3", name: "category3", widget: "string", required: false }
+          - { label: "Is Draft?", name: "draft", widget: "boolean"}
           - { label: "Minimum Age", name: "minage", widget: "hidden", default: 2 }
           - { label: "Maximum Age", name: "maxage", widget: "hidden", default: 18 }
           - label: Tile Picture
