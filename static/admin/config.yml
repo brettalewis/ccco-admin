@@ -53,6 +53,14 @@ collections:
             valueType: "int"
             default: 3
             min: 0
+      - name: company
+        label: "Company"
+        file: "content/company/_index.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string"}
+          - { label: "Short Description", name: "description", widget: "string"}
+          - { label: "CMS", name: "cms", widget: "hidden", default: "false"}
+          - { label: "Content", name: "body", widget: "markdown"}
       - name: "resources"
         label: "Resources"
         file: "content/resources/_index.md"
