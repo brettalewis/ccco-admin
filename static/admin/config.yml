@@ -55,6 +55,19 @@ collections:
             valueType: "int"
             default: 3
             min: 0
+          - label: "Partnerships"
+            label_singular: "Partnership"
+            name: "partnerships"
+            required: false
+            widget: "list"
+            field:
+              label: "Partner"
+              name: "partner"
+              widget: "object"
+              fields:
+                - { label: "Name", name: "name", widget: "string", required: false }
+                - { label: "Logo", name: "logo", widget: "image", required: false }
+                - { label: "URL", name: "url", widget: "string", required: false }
       - name: "company"
         label: "Company"
         file: "content/company/_index.md"
