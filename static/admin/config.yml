@@ -418,14 +418,6 @@ collections:
         widget: image
         required: false
         tagname: ''
-        media_library:
-          config:
-            default_transformations:
-              -   - aspect_ratio: "1:1"
-                    crop: "crop"
-                  - crop: "limit"
-                    width: 300
-                  - gravity: "face:center"
       - {label: Job Title, name: job_title, widget: string}
       - {label: "Exclude from Sitemap", name: sitemap_exclude: widget: hidden, default: true }
       - {label: Short Bio, name: body, widget: markdown}
