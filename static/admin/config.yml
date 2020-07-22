@@ -250,7 +250,7 @@ collections:
     fields:
       - {label: CMS, name: cms, widget: hidden, default: true}
       - {label: Event Name, name: name, widget: string}
-      - {label: "Exclude from Sitemap", name: sitemap_exclude: widget: hidden, default: true }
+      - {label: "Exclude from Sitemap", name: "sitemap_exclude", widget: hidden, default: true }
       - label: Event Picture
         name: photo
         widget: image
@@ -280,7 +280,7 @@ collections:
           - { label: Description, name: description, widget: string }
           - { label: Password, name: password, widget: string, required: false }
           - { label: "Is Draft?", name: "draft", widget: "boolean"}
-          - {label: "Exclude from Sitemap", name: sitemap_exclude: widget: hidden, default: true }
+          - {label: "Exclude from Sitemap", name: sitemap_exclude, widget: hidden, default: true }
           - { label: Content, name: body, widget: markdown }
           - name: 'resources'
             label: 'Resources'
@@ -320,7 +320,7 @@ collections:
           - { label: Description, name: description, widget: string }
           - { label: Password, name: password, widget: string, required: false }
           - { label: "Is Draft?", name: "draft", widget: "boolean"}
-          - {label: "Exclude from Sitemap", name: sitemap_exclude: widget: hidden, default: true }
+          - {label: "Exclude from Sitemap", name: sitemap_exclude, widget: hidden, default: true }
           - { label: Content, name: body, widget: markdown }
           - name: 'resources'
             label: 'Resources'
@@ -362,7 +362,7 @@ collections:
     fields:
       - {label: CMS, name: cms, widget: hidden, default: true}
       - {label: Company Name, name: name, widget: string}
-      - {label: "Exclude from Sitemap", name: sitemap_exclude: widget: hidden, default: true }
+      - {label: "Exclude from Sitemap", name: sitemap_exclude, widget: hidden, default: true }
       - label: Company Picture
         name: photo
         widget: image
@@ -419,5 +419,5 @@ collections:
         required: false
         tagname: ''
       - {label: Job Title, name: job_title, widget: string}
-      - {label: "Exclude from Sitemap", name: sitemap_exclude: widget: hidden, default: true }
+      - {label: "Exclude from Sitemap", name: sitemap_exclude, widget: hidden, default: true }
       - {label: Short Bio, name: body, widget: markdown}
