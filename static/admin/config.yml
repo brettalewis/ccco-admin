@@ -24,6 +24,15 @@ collections:
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Description, name: description, widget: string }
+          - label: "COVID Level"
+            name: "covidlevel"
+            widget: "select"
+            required: "false"
+            options:
+              - { label: "Red", value: "red" }
+              - { label: "Yellow", value: "yellow" }
+              - { label: "Green", value: "green" }
+          - { label: Headline, name: headline, widget: string }
           - label: "Alert"
             name: "alert"
             widget: "object"
@@ -279,6 +288,7 @@ collections:
       - label: "Event Date"
         name: "startdate"
         widget: "datetime"
+        required: false
       - {label: Description, name: description, widget: string}
       - {label: Event Info, name: body, widget: markdown}
   - name: "special-events"
