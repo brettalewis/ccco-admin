@@ -164,6 +164,18 @@ collections:
                         fields:
                           - { label: Title, name: title, widget: string}
                           - { label: URL, name: url, widget: string }
+      - name: "connect"
+        label: "Connect - Mailing List"
+        file: "content/connect/_index.md"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Description, name: description, widget: string }
+          - { label: "Is Draft?", name: "draft", widget: "boolean"}
+          - { label: Content, name: body, widget: markdown }
+          - label: Side Photo (portrait mode)
+            name: photo
+            widget: image
+            tagname: ''
   - name: "programs"
     label: "Programs"
     delete: false
