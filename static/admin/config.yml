@@ -27,7 +27,7 @@ collections:
           - label: "COVID Level"
             name: "covidlevel"
             widget: "select"
-            required: "false"
+            required: false
             options:
               - { label: "Red", value: "red" }
               - { label: "Yellow", value: "yellow" }
