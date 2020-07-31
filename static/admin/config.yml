@@ -32,6 +32,7 @@ collections:
               - { label: "Red", value: "red" }
               - { label: "Yellow", value: "yellow" }
               - { label: "Green", value: "green" }
+              - { label: "Summer", value: "summer" }
           - { label: Headline, name: headline, widget: string }
           - label: "Alert"
             name: "alert"
@@ -92,6 +93,7 @@ collections:
           - { label: "Title", name: "title", widget: "string"}
           - { label: "Short Description", name: "description", widget: "string", required: false }
           - { label: "Page Content", name: "body", widget: "markdown"}
+          - { label: "Is Draft?", name: "draft", widget: "boolean"}
           - label: Header Photo
             name: photo
             widget: image
