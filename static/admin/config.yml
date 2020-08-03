@@ -178,8 +178,8 @@ collections:
             name: photo
             widget: image
             tagname: ''
-  - name: "programs"
-    label: "Programs"
+  - name: "classes"
+    label: "Classes"
     delete: false
     files:
       - name: "fallPreschool"
@@ -188,6 +188,7 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Layout", name: "layout", widget: "hidden", default: "table_day" }
+          - { label: "Program Type", name: "program_type", widget: "hidden", default: "class"}
           - { label: "Description", name: "description", widget: "string", required: false }
           - { label: "Session", name: "session", widget: "string" }
           - { label: "Category 1", name: "category1", widget: "string", required: false }
@@ -206,6 +207,7 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Layout", name: "layout", widget: "hidden", default: "table_day" }
+          - { label: "Program Type", name: "program_type", widget: "hidden", default: "class"}
           - { label: "Description", name: "description", widget: "string", required: false }
           - { label: "Session", name: "session", widget: "string" }
           - { label: "Category 1", name: "category1", widget: "string", required: false }
@@ -225,6 +227,7 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Layout", name: "layout", widget: "hidden", default: "table_day" }
+          - { label: "Program Type", name: "program_type", widget: "hidden", default: "class"}
           - { label: "Description", name: "description", widget: "string", required: false }
           - { label: "Session", name: "session", widget: "string" }
           - { label: "Category 1", name: "category1", widget: "string", required: false }
@@ -243,6 +246,7 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Section Class", name: "sectionClass", widget: "hidden", default: "winter-session"}
           - { label: "Layout", name: "layout", widget: "hidden", default: "table_day" }
+          - { label: "Program Type", name: "program_type", widget: "hidden", default: "class"}
           - { label: "Description", name: "description", widget: "string", required: false }
           - { label: "Session", name: "session", widget: "string" }
           - { label: "Category 1", name: "category1", widget: "string", required: false }
@@ -263,6 +267,7 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Section Class", name: "sectionClass", widget: "hidden", default: "summer-session"}
           - { label: "Layout", name: "layout", widget: "hidden", default: "table" }
+          - { label: "Program Type", name: "program_type", widget: "hidden", default: "class"}
           - { label: "Description", name: "description", widget: "string", required: false }
           - { label: "Session", name: "session", widget: "string" }
           - { label: "Category 1", name: "category1", widget: "string", required: false }
@@ -276,6 +281,55 @@ collections:
             widget: image
             required: false
             tagname: ''
+  - name: "programs"
+    label: "Programs"
+    label_singular: "Program"
+    folder: "content/programs"
+    filter: {field: "cms", value: true}
+    create: true
+    identifier_field: title
+    fields:
+      - { label: CMS, name: cms, widget: hidden, default: true }
+      - { label: Program Name, name: title, widget: string }
+      - { label: Description, name: description, widget: string }
+      - { label: Is Draft?, name: draft, widget: boolean }
+      - { label: Headline, name: headline, widget: string }
+      - { label: Content, name: body, widget: markdown }
+      - label: Program Picture
+        name: photo
+        widget: image
+        required: false
+        tagname: ''
+      - name: 'resources'
+        label: 'Resources'
+        label_singular: 'Resource'
+        summary: '{{fields.section.header}}'
+        widget: 'list'
+        fields:
+          - name: 'section'
+            label: 'Section'
+            widget: object
+            fields:
+              - { label: Header, name: header, widget: string }
+              - name: 'items'
+                label: 'Resource Items'
+                label_singular: 'Resource'
+                widget: 'list'
+                types:
+                  - name: 'document'
+                    label: 'Document'
+                    widget: 'object'
+                    summary: '{{fields.title}}'
+                    fields:
+                      - { label: Title, name: title, widget: string}
+                      - { label: Document, name: url, widget: file }
+                  - name: 'url'
+                    label: 'URL'
+                    widget: 'object'
+                    summary: '{{fields.title}}'
+                    fields:
+                      - { label: Title, name: title, widget: string}
+                      - { label: URL, name: url, widget: string }
   - name: "events"
     label: "Regular Events"
     label_singular: "Event"
@@ -446,6 +500,7 @@ collections:
     create: true
     identifier_field: name
     fields:
+      - {label: "Exclude from Sitemap", name: sitemap_exclude, widget: hidden, default: true }
       - {label: CMS, name: cms, widget: hidden, default: true}
       - {label: Staff Name, name: name, widget: string}
       - {label: Fun Fact, name: funfact, widget: string, required: false}
@@ -456,5 +511,4 @@ collections:
         required: false
         tagname: ''
       - {label: Job Title, name: job_title, widget: string}
-      - {label: "Exclude from Sitemap", name: sitemap_exclude, widget: hidden, default: true }
       - {label: Short Bio, name: body, widget: markdown}
