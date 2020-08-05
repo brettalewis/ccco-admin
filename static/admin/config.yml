@@ -201,6 +201,7 @@ collections:
             name: photo
             widget: image
             tagname: ''
+          - { label: Content, name: "body", widget: markdown }
       - name: "fallGradeSchool"
         label: "Fall Programs - Grade School"
         file: "content/programs/fall/k-12/_index.md"
@@ -221,6 +222,7 @@ collections:
             widget: image
             required: false
             tagname: ''
+          - { label: Content, name: "body", widget: markdown }
       - name: "fallAdult"
         label: "Fall Programs - Adult"
         file: "content/programs/fall/adult/_index.md"
@@ -239,6 +241,7 @@ collections:
             widget: image
             required: false
             tagname: ''
+          - { label: Content, name: "body", widget: markdown }
       - name: "winter"
         label: "Winter Programs"
         file: "content/programs/winter/_index.md"
@@ -260,6 +263,7 @@ collections:
             widget: image
             required: false
             tagname: ''
+          - { label: Content, name: "body", widget: markdown }
       - name: "summer"
         label: "Summer Programs"
         file: "content/programs/summer/_index.md"
@@ -281,6 +285,7 @@ collections:
             widget: image
             required: false
             tagname: ''
+          - { label: Content, name: "body", widget: markdown }
   - name: "programs"
     label: "Programs"
     label_singular: "Program"
