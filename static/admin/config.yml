@@ -266,12 +266,13 @@ collections:
         file: "content/programs/ccs-learning-camp.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Layout", name: "layout", widget: "hidden", default: "table_day" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "table" }
           - { label: "Description", name: "description", widget: "string", required: false }
           - { label: "Session", name: "session", widget: "string" }
           - { label: "Category 1", name: "category1", widget: "string", required: false }
           - { label: "Category 2", name: "category2", widget: "string", required: false }
           - { label: "Category 3", name: "category3", widget: "string", required: false }
+          - { label: "Initial Date", name: "initialDate", widget: "hidden", default: "2019-12-30" }
           - { label: "Is Draft?", name: "draft", widget: "boolean" }
           - label: Tile Picture
             name: photo
