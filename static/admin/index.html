@@ -9,5 +9,68 @@
 <body>
   <!-- Include the script that builds the page and powers Netlify CMS -->
   <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  <script>
+  var StaffPreview = createClass({
+    render: function() {
+      var entry = this.props.entry;
+      var image = entry.getIn(['data', 'photo']);
+      var bg = this.props.getAsset(image);
+      return h('div', {},
+        h('img', {"width": "300px", src: bg.toString()}),
+        h('br', {}),
+        h('strong', {}, entry.getIn(['data', 'name'])),
+        h('br', {}),
+        h('em', {}, entry.getIn(['data', 'job_title'])),
+        h('div', {"className": "text"}, this.props.widgetFor('body')),
+        entry.getIn(['data', 'funfact']) &&
+        h('p', {},
+          h('strong', {}, 'Fun Fact: '),
+          entry.getIn(['data', 'funfact'])
+        ),
+        entry.getIn(['data', 'startdate']) && 
+        h('p', {},
+          h('strong', {}, 'Years at CCCO: '),
+          Math.floor(Math.abs(Date.now() - new Date(entry.getIn(['data', 'startdate']))) / 31536000 / 1000) + 1
+        )
+      );
+    }
+  });
+  CMS.registerPreviewTemplate('staff', StaffPreview);
+
+  var CompanyPreview = createClass({
+    render: function() {
+      var entry = this.props.entry;
+      var image = entry.getIn(['data', 'photo']);
+      var bg = this.props.getAsset(image);
+      return h('div', {},
+        h('img', {"width": "300px", src: bg.toString()}),
+        h('br', {}),
+        h('h2', {}, entry.getIn(['data', 'name'])),
+        h('div', {"className": "text"}, this.props.widgetFor('body')),
+        (typeof entry.getIn(['data', 'resources']) !== 'undefined') && h('h3', {}, 'Resources'),
+        (typeof entry.getIn(['data', 'resources']) !== 'undefined') &&
+        this.props.widgetsFor('resources').map(function(resource, index) {
+          return (typeof resource === 'undefined') ? ''
+          : h('ul', {},
+            h('li', {},
+              resource.hasIn(['data', 'section', 'header']) &&
+              resource.getIn(['data', 'section', 'header']),
+              h('ul', {},
+                resource.hasIn(['data', 'section', 'items']) &&
+                resource.getIn(['data', 'section', 'items']).map(function(item, idx) {
+                  return h('li', {},
+                    h('a', {'href': item.getIn(['url']), 'alt': item.getIn(['title'])}, item.getIn(['title']))
+                  );
+                })
+              )
+            )
+          );
+        })
+      );
+    }
+  });
+  CMS.registerPreviewTemplate('company', CompanyPreview);
+
+  </script>
 </body>
 </html>

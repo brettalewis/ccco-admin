@@ -79,7 +79,7 @@ collections:
                 - { label: "Name", name: "name", widget: "string", required: false }
                 - { label: "Logo", name: "logo", widget: "image", required: false }
                 - { label: "URL", name: "url", widget: "string", required: false }
-      - name: "company"
+      - name: "companyMain"
         label: "Company"
         file: "content/company/_index.md"
         fields:
