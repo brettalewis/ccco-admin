@@ -261,6 +261,24 @@ collections:
             required: false
             tagname: ''
           - { label: Content, name: "body", widget: markdown }
+      - name: "virtualClasses"
+        label: "Virtual Classes"
+        file: "content/programs/virtual-classes.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "table_day" }
+          - { label: "Description", name: "description", widget: "string", required: false }
+          - { label: "Session", name: "session", widget: "string" }
+          - { label: "Category 1", name: "category1", widget: "string", required: false }
+          - { label: "Category 2", name: "category2", widget: "string", required: false }
+          - { label: "Category 3", name: "category3", widget: "string", required: false }
+          - { label: "Is Draft?", name: "draft", widget: "boolean"}
+          - label: Tile Picture
+            name: photo
+            widget: image
+            required: false
+            tagname: ''
+          - { label: Content, name: "body", widget: markdown }
       - name: "learningCamp"
         label: "CC's Learning Camp"
         file: "content/programs/ccs-learning-camp.md"
