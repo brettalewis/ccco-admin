@@ -433,6 +433,10 @@ collections:
           - { label: Password, name: password, widget: string, required: false }
           - { label: "Is Draft?", name: "draft", widget: "boolean"}
           - { label: Content, name: body, widget: markdown }
+          - label: Header Photo
+            name: photo
+            widget: image
+            required: false
           - name: 'resources'
             label: 'Resources'
             label_singular: 'Resource'
