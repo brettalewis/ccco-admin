@@ -320,28 +320,28 @@ collections:
             required: false
             tagname: ''
           - { label: Content, name: "body", widget: markdown }
-      - name: "summer"
-        label: "Summer Programs"
-        file: "content/programs/summer/_index.md"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Section Class", name: "sectionClass", widget: "hidden", default: "summer-session"}
-          - { label: "Layout", name: "layout", widget: "hidden", default: "table" }
-          - { label: "Program Type", name: "program_type", widget: "hidden", default: "class"}
-          - { label: "Description", name: "description", widget: "string", required: false }
-          - { label: "Session", name: "session", widget: "string" }
-          - { label: "Category 1", name: "category1", widget: "string", required: false }
-          - { label: "Category 2", name: "category2", widget: "string", required: false }
-          - { label: "Category 3", name: "category3", widget: "string", required: false }
-          - { label: "Is Draft?", name: "draft", widget: "boolean"}
-          - { label: "Minimum Age", name: "minage", widget: "hidden", default: 2 }
-          - { label: "Maximum Age", name: "maxage", widget: "hidden", default: 18 }
-          - label: Tile Picture
-            name: photo
-            widget: image
-            required: false
-            tagname: ''
-          - { label: Content, name: "body", widget: markdown }
+      # - name: "summer"
+      #   label: "Summer Programs"
+      #   file: "content/programs/summer/_index.md"
+      #   fields:
+      #     - { label: "Title", name: "title", widget: "string" }
+      #     - { label: "Section Class", name: "sectionClass", widget: "hidden", default: "summer-session"}
+      #     - { label: "Layout", name: "layout", widget: "hidden", default: "table" }
+      #     - { label: "Program Type", name: "program_type", widget: "hidden", default: "class"}
+      #     - { label: "Description", name: "description", widget: "string", required: false }
+      #     - { label: "Session", name: "session", widget: "string" }
+      #     - { label: "Category 1", name: "category1", widget: "string", required: false }
+      #     - { label: "Category 2", name: "category2", widget: "string", required: false }
+      #     - { label: "Category 3", name: "category3", widget: "string", required: false }
+      #     - { label: "Is Draft?", name: "draft", widget: "boolean"}
+      #     - { label: "Minimum Age", name: "minage", widget: "hidden", default: 2 }
+      #     - { label: "Maximum Age", name: "maxage", widget: "hidden", default: 18 }
+      #     - label: Tile Picture
+      #       name: photo
+      #       widget: image
+      #       required: false
+      #       tagname: ''
+      #     - { label: Content, name: "body", widget: markdown }
       - name: "summer-2021"
         label: "Summer 2021"
         file: "content/programs/summer-2021.md"
