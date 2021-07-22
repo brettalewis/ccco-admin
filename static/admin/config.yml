@@ -387,6 +387,51 @@ collections:
                         fields:
                           - { label: Title, name: title, widget: string}
                           - { label: URL, name: url, widget: string }
+      - name: "sdi"
+        label: "SDI"
+        file: "content/programs/sdi.md"
+        fields:
+          - { label: CMS, name: cms, widget: hidden, default: false}
+          - { label: "Program Name", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string", required: false }
+          - { label: "Is Draft?", name: "draft", widget: "boolean" }
+          - { label: "Headline", name: "headline", widget: "string" }
+          - { label: "Content", name: "body", widget: "markdown" }
+          - label: Program Picture
+            name: photo
+            widget: image
+            required: false
+            tagname: ''
+          - name: 'resources'
+            label: 'Resources'
+            label_singular: 'Resource'
+            summary: '{{fields.section.header}}'
+            widget: 'list'
+            fields:
+              - name: 'section'
+                label: 'Section'
+                widget: object
+                fields:
+                  - { label: Header, name: header, widget: string }
+                  - name: 'items'
+                    label: 'Resource Items'
+                    label_singular: 'Resource'
+                    widget: 'list'
+                    types:
+                      - name: 'document'
+                        label: 'Document'
+                        widget: 'object'
+                        summary: '{{fields.title}}'
+                        fields:
+                          - { label: Title, name: title, widget: string}
+                          - { label: Document, name: url, widget: file }
+                      - name: 'url'
+                        label: 'URL'
+                        widget: 'object'
+                        summary: '{{fields.title}}'
+                        fields:
+                          - { label: Title, name: title, widget: string}
+                          - { label: URL, name: url, widget: string }
   - name: "programs"
     label: "Programs"
     label_singular: "Program"
