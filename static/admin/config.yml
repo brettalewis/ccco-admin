@@ -179,6 +179,18 @@ collections:
             name: photo
             widget: image
             tagname: ''
+      - name: "contact"
+        label: "Contact Us"
+        file: "content/contact/_index.md"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Description, name: description, widget: string }
+          - { label: "Is Draft?", name: "draft", widget: "boolean" }
+          - label: Calendar Image
+            name: calendarImage
+            widget: image
+            required: false
+            tagname: ''
   - name: "classes"
     label: "Classes"
     delete: false
